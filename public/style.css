@@ -1,0 +1,340 @@
+@import 'https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap';
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url("./asset/pokemon.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.contenedor {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid #387ADF;
+  background-color: #e70606;
+  background: rgb(235, 220, 220);
+  background: linear-gradient(15deg,
+      rgba(0, 0, 0, 1) 0%,
+      /* rgb(53, 40, 238) 22%, */
+      #333A73,
+      rgba(92, 23, 127, 0.321) 39%,
+      rgba(60, 15, 82, 0.396) 63%,
+      #333A73 83%,
+      rgb(12, 12, 12) 100%);
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 0px 10px 10px rgba(19, 19, 22, 0.158);
+
+}
+
+.titulo {
+  color: white;
+  font-size: 32px;
+  font-family: 'Fredoka One', cursive;
+}
+
+.subtitulo {
+  color: white;
+  font-size: 20px;
+}
+
+input {
+  display: none;
+}
+
+button,
+input,
+label,
+img,
+p {
+  transition: transform 300ms;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+
+input:checked+label {
+  background: linear-gradient(to top, #ebe2e24a, #FBA834);
+  box-shadow: 0px 0px 6px 2px #FBA834;
+  border: 3px solid #FBA834;
+  transform: scale(1.1);
+}
+
+input:hover+label {
+  transform: translateY(-10px);
+  border: 3px solid #07070793;
+  box-shadow: 0px 0px 8px 5px #333A73;
+}
+
+input:active+label {
+  box-shadow: 0px 0px 8px 5px #ccc5c483;
+  border: 1px solid #c4ff99ef;
+}
+
+input:hover+label>img {
+  transform: scale(1.15) translateY(-5px);
+}
+
+input:hover+label>p {
+  transform: scale(1.1) translateY(1px);
+}
+
+.boton:hover {
+  background-color: #333A73;
+  font-size: 17px;
+}
+
+.boton:active {
+  background-color: #FBA834;
+  box-shadow: 0px 0px 6px 3px #333A73;
+}
+
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.tarjeta-mokepon {
+  width: 150px;
+  height: 180px;
+  background: rgba(149, 159, 165, 0.151);
+  border-radius: 10px;
+  border: 3px solid #eeeeee40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  box-sizing: border-box;
+  transition: transform 0.1s linear;
+}
+
+.tarjeta-mokepon img {
+  width: 115px;
+}
+
+.tarjeta-mokepon p {
+  width: 100%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(17, 16, 16, 0.938);
+  margin: 0px;
+}
+
+.boton {
+  width: 180px;
+  height: 40px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  margin-top: 30px;
+  font-size: 16px;
+  background: #FBA834;
+  border: none;
+  transition: all 300ms ease;
+}
+
+.boton-de-ataque {
+  background-color: transparent;
+  width: 60px;
+  height: 50px;
+  font-size: 25px;
+  line-height: 20px;
+  border: 3px solid #0a0909e3;
+  padding: 5px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #0f0f0f;
+  font-weight: bolder;
+  margin: 5px;
+  transition: all 300ms ease-in-out;
+}
+
+.fuego {
+  border-color: #dd0c0cd5;
+}
+
+.agua {
+  border-color: rgba(14, 173, 221, 0.911);
+}
+
+.tierra {
+  border-color: #e98707ec;
+}
+
+.fuego:hover {
+  border-color: #ff3a16;
+}
+
+.agua:hover {
+  border-color: rgb(121 223 255);
+}
+
+.tierra:hover {
+  border-color: #c4ff99;
+}
+
+.contenedor-boton-ataque {
+  display: flex;
+}
+
+.fa-fire {
+  color: orange;
+  text-shadow: 1px 1px rgba(226, 136, 18, 0.836);
+}
+
+.fa-droplet {
+  color: rgb(121 223 255);
+  text-shadow: 2px 1px #01a1fc;
+}
+
+.fa-seedling {
+  color: #c3ff99;
+  text-shadow: 1px 2px forestgreen;
+}
+
+.fa-trophy {
+  color: #ffc93c;
+  text-shadow: 2px 2px 2px rgb(55, 202, 55);
+  font-size: 40px;
+}
+
+.ataque .fa-trophy {
+  font-size: 18px;
+  color: #fff;
+  text-shadow: none;
+}
+
+.fa-face-sad-tear,
+.fa-face-smile {
+  color: #aaa;
+  font-size: 40px;
+}
+
+.resultado {
+  margin: 0px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mensajes {
+  width: 280px;
+  background: transparent;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid #f0eaeaad;
+}
+
+.figuraResultado {
+  margin: 8px 0;
+}
+
+.boton-reiniciar {
+  margin-top: 5px;
+}
+
+.ataque {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 150px 150px;
+  justify-items: center;
+}
+
+.ataque p {
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+
+.nombre-mascota {
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0px 0px 5px #FBA834;
+}
+
+.ataques p {
+  line-height: 30px;
+}
+
+.img-mini>img {
+  transition: transform 0.3s linear;
+  width: 90px;
+}
+
+.ataque span {
+  padding: 5px 5px 10px 0;
+  display: inline-block;
+}
+
+.ataque .nombre {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+footer {
+  font-size: 13px;
+  color: black;
+  font-weight: 200;
+  text-align: center;
+}
+
+footer p {
+  padding: 0 40px;
+}
+
+footer .fa-heart {
+  font-size: 14px;
+  color: rgb(8, 8, 7);
+}
+
+.gris {
+  filter: grayscale(100%);
+}
+
+@media (max-width: 448px) {
+  .contenedor {
+    width: 85%;
+  }
+
+  .titulo {
+    font-size: 50px;
+  }
+
+  .subtitulo {
+    font-size: 18px;
+  }
+
+  .contenedor-boton-ataque {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .boton-mascota,
+  .boton-de-ataque,
+  .mensajes {
+    width: 80%;
+  }
+
+  footer p {
+    padding: 10px;
+  }
+}

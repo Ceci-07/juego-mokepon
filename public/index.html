@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mokepon</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <section id="seleccionar-mascota" class="contenedor">
+    <h1 class="titulo">MOKEPÓN</h1>
+    <h2 class="subtitulo">Elige tu mascota:</h2>
+    <div id="contenedor-de-tarjetas" class="tarjetas"></div>
+    <button id="boton-seleccionar-mascota" class="boton">Seleccionar</button>
+  </section>
+
+  <section id="seleccionar-ataque" class="contenedor">
+    <h1 class="titulo">MOKEPÓN</h1>
+    <h2 class="subtitulo" id="subtitulo">Elige tu ataque:</h2>
+
+    <div class="contenedor-boton-ataque" id="contenedor-boton-ataque">
+    </div>
+    <div id="mensajes" class="mensajes" disable>
+      <p class="resultado" id="resultado"></p>
+
+      <section id="reiniciar">
+        <button id="boton-reiniciar" class="boton boton-reiniciar">Reiniciar <i class="fa-solid fa-rotate"></i></button>
+      </section>
+    </div>
+
+    <div class="ataque">
+      <div>
+        <p class="nombre">JUGADOR</p>
+        <p>
+          <span id="vidas-jugador" class="vidas">0</span> <span><i class='fa-solid fa-trophy'></i></span>
+        </p>
+        <div id="img-miniatura" class="img-mini">
+          <img id="img-miniatura-jugador" src="" alt="Mascota en combate">
+        </div>
+
+        <p id="mascota-jugador" class="nombre-mascota"></p>
+
+        <div id="ataques-del-jugador" class="ataques"></div>
+      </div>
+      <div>
+        <p class="nombre">ENEMIGO</p>
+        <p>
+          <span id="vidas-enemigo" class="vidas">0</span> <span><i class='fa-solid fa-trophy'></i></span>
+        </p>
+
+        <div class="img-mini">
+          <img id="img-miniatura-enemigo" src="" alt="Mascota en combate">
+        </div>
+
+        <p id="mascota-enemigo" class="nombre-mascota"></p>
+
+        <div id="ataques-del-enemigo" class="ataques"></div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <footer>
+    <div>
+      <p>© 2024 | Todos los derechos reservados. Curso de Programación Básica.</p>
+    </div>
+  </footer>
+  </section>
+  <script src="./mokepon.js"></script>
+</body>
+
+</html>
